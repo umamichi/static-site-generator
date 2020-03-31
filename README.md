@@ -1,6 +1,5 @@
 # 静的サイトジェネレーター Gatsby
 
-
 ## 静的サイトジェネレーターとは？
 
 Static Site Generator（SSG）
@@ -17,7 +16,7 @@ Wordpressのような従来CMSの仕組みは、MySQLなどのDBをもとに、�
 さらに、生成されたファイルを、Netlifyなどのホスティングサービスを用いて、サーバーレスで公開する仕組みが主流になっている
 
 
-<img src="2.webp">
+<img src="https://github.com/umamichi/static-site-generator/raw/master/2.webp">
 
 ## 静的サイトジェネレーターのメリット
 
@@ -56,7 +55,7 @@ Wordpressのような従来CMSの仕組みは、MySQLなどのDBをもとに、�
 
 400を超える数がある
 
-<img src="1.webp">
+<img src="https://github.com/umamichi/static-site-generator/raw/master/1.webp">
 
 過去2年で、フレームワークが成熟したらしく、代表的なものは以下↓
 
@@ -261,7 +260,7 @@ Hello World。Hello World。Hello World。Hello World。Hello World。Hello Worl
 ```javascript
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 
 const GetMarkdown = () => {
   // useStaticQuery は gatsby に用意されているメソッド
@@ -345,16 +344,17 @@ gatsby-config.js に以下を追記
 今回はシンプルに以下のような`Userデータ`を作成
 
 | name | age |
-| -- | -- |
+| --- | --- |
 | john | 5 |
 | umamichi | 27 |
+
 
 `pages/contentful.js` を作成
 
 ```javascript
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 
 const Contentful = () => {
   const data = useStaticQuery(graphql`
@@ -412,11 +412,13 @@ $ gatsby build
 
 contentfulのデータなども一式組み込まれている
 
-ちなみに、上記のサンプル含めたった4ページでビルドにかかった時間は `27.9s` 
+ちなみに、上記のサンプル含めたった4ページで初回ビルドにかかった時間は `27.9s` 
 
 こちらはまだまだ改善の余地ありそう。というかぜひしていただきたい。
 
-Netlifyの公開手順は省略しますが、[このあたりの記事](https://qiita.com/shozzy/items/dadea4181d6219d2d326)を参考にしてみてください。5分で公開完了
+キャッシュされるようで、2回目以降のビルドは `15s` くらいに落ち着いた。
+
+Netlifyの公開手順は省略しますが、[このあたりの記事](https://qiita.com/shozzy/items/dadea4181d6219d2d326)を参考にしてみてください。5分で公開完了👇
 
 https://gatsby-site-umamichi.netlify.com/
 
