@@ -16,7 +16,7 @@ Wordpressのような従来CMSの仕組みは、MySQLなどのDBをもとに、�
 さらに、生成されたファイルを、Netlifyなどのホスティングサービスを用いて、サーバーレスで公開する仕組みが主流になっている
 
 
-<img src="https://github.com/umamichi/static-site-generator/raw/master/2.webp">
+<img src="https://github.com/umamichi/static-site-generator/raw/master/2.png">
 
 ## 静的サイトジェネレーターのメリット
 
@@ -55,7 +55,7 @@ Wordpressのような従来CMSの仕組みは、MySQLなどのDBをもとに、�
 
 400を超える数がある
 
-<img src="https://github.com/umamichi/static-site-generator/raw/master/1.webp">
+<img src="https://github.com/umamichi/static-site-generator/raw/master/1.png">
 
 過去2年で、フレームワークが成熟したらしく、代表的なものは以下↓
 
