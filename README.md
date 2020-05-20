@@ -445,6 +445,40 @@ https://gatsby-site-umamichi.netlify.com/
 
 + 日本は世界のトレンドから1年くらい遅れる傾向があるので2020年から静的サイトジェネレータがもっと普及していくと予想（期待）
 
+## 追記（2020.5.20)
+
+PWA化を試してみる
+
+`gatsby-plugin-manifest` というプラグインを使い設定ファイルを書くだけで完了
+
+このプラグインはデフォルトで npm install されています
+
+`gatsby.config.js` に以下を追加
+
+```javascript
+    ....
+    // PWA manifest settings
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'umamichi gatsby sample site',
+        short_name: 'UMAMICHI',
+        start_url: '/?',
+        background_color: '#888', // アプリ起動時の背景色
+        theme_color: '#d23d29', // ブラウザツールバーの色
+        display: 'minimal-ui',　// アプリのスタイル
+      },
+    },
+    ...
+```
+
+これだけで完了です！
+
+[詳しくは公式ドキュメントを参照してみてください](https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/)
+
+PWAは、こういったビルドツールにプラグインとして設定を追加するだけで簡単に実現できるようになってきているので、
+
+今後 manifest.json をエンジニアが直接作成することは無くなっていくと思われます
 
 
 ## 参考
